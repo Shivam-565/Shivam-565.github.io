@@ -1,0 +1,312 @@
+body {margin: 0px; font-family: Georgia, 'Times New Roman', Times, serif; background-color: gray;}
+.header {
+overflow: hidden;
+background-color: black;
+padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+float: left;
+color: cornsilk;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.logohead a.logo {
+font-size: 25px;
+font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+background-color: rgba(209, 209, 209, 0.42);
+color: cornsilk;
+}
+
+/* Style the active/current link*/
+.header a.active {
+background-color: grey;
+color: cornsilk;
+}
+
+/* Float the link section to the right */
+.header-right {
+float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 40px) {
+.header a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+.header-right {
+    float: none;
+}
+}
+
+.blink {text-align: center; color: cornsilk; animation-name: headcolor; animation-duration: 3s; animation-iteration-count: infinite;}
+nav {background-color: black; overflow: hidden; max-width: 100%;}
+nav a {color: beige; text-align: center; padding: 14px 16px; float: left; border-right: 1px solid beige; text-decoration: none;}
+nav a:hover {background-color: darkolivegreen;}
+#selected {background-color: darkolivegreen;}
+#center {text-align: center;}
+
+.logsign {font-size: 25px;
+     color: cornsilk; 
+     background-color: darkolivegreen; 
+     border: black 2px solid; 
+     padding: 20px 40px; 
+     align-content: center; 
+     border-radius: 15px;}
+
+.logsign:hover {
+   box-shadow: cornsilk 1px 1px 9px;
+}     
+
+.searchbar {
+    float: right;
+    align-content: center;
+    margin: 3px 9px;
+    padding: 8px;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%; 
+    height: 500px; 
+    background-color: #f0f0f0; 
+}
+
+.image-container img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.image-container p {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 40px; 
+    color: cornsilk; 
+    text-shadow: 2px 2px 4px darkolivegreen;
+    text-align: center; 
+}
+
+.btn {
+color: cornsilk;
+font-size: 25px;
+border-radius: 20px;
+padding: 12px 25px;
+border: 2px solid cornsilk;
+background-color: transparent;
+margin: 25px 25px 25px 25px;}
+
+.btn:hover{
+background-color: rgba(0, 0, 0, 0.21);
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+@keyframes display {
+0% {
+    transform: translateX(200px);
+    opacity: 0;
+}
+10% {
+    transform: translateX(0);
+    opacity: 1;
+}
+20% {
+    transform: translateX(0);
+    opacity: 1;
+}
+30% {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+100% {
+    transform: translateX(-200px);
+    opacity: 0;
+}
+}
+
+.pic-ctn {
+position: relative;
+width: 100vw;
+height: 300px;
+}
+
+.pic-ctn > img {
+position: absolute;
+top: 0;
+left: calc(80% - 100px);
+opacity: 0;
+animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+animation-delay: 2s;
+}
+img:nth-child(3) {
+animation-delay: 4s;
+}
+img:nth-child(4) {
+animation-delay: 6s;
+}
+img:nth-child(5) {
+animation-delay: 8s;
+}
+
+.hero {
+background-color: black;
+position: relative;
+height: 300px;
+overflow: hidden;
+font-family: "Montserrat", sans-serif;
+}
+
+.hero__text {
+position: absolute;
+top: 50%;
+left: 20px;
+transform: translateY(-50%);
+color: cornsilk;
+font-size: 35px;
+}
+
+.hero__title {
+color: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 50px;
+z-index: 1;
+}
+
+.circle {
+    position: absolute;
+    top: 80vh;
+    left: 45vw;
+    width: 10px;
+    height: 10px;
+    background-color: #b5b5b5; /* Change background color to desired color */
+    border-radius: 50%; /* Make the element circular */
+    transform-origin: center; /* Set transform origin to center for circular rotation */
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    animation: circle 12s ease-in forwards infinite;
+}
+
+/* Additional styles for even circles */
+.circle:nth-child(2n) {
+    background-color: #b5b5b5; /* Change background color to desired color */
+}
+
+/* Positioning for individual circles */
+.circle:nth-child(2) {
+    animation-delay: 2s;
+    left: 25vw;
+    top: 40vh;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 4s;
+    left: 75vw;
+    top: 50vh;
+}
+
+.circle:nth-child(4) {
+    animation-delay: 6s;
+    left: 90vw;
+    top: 10vh;
+}
+
+.circle:nth-child(5) {
+    animation-delay: 8s;
+    left: 10vw;
+    top: 85vh;
+}
+
+.circle:nth-child(6) {
+    animation-delay: 10s;
+    left: 50vw;
+    top: 10vh;
+}
+
+@keyframes circle {
+    from {
+        transform: scale(0) rotate(0deg) translate(-50%, -50%);
+        opacity: 1;
+    }
+    to {
+        transform: scale(20) rotate(960deg) translate(-50%, -50%);
+        opacity: 0;
+    }
+}
+
+.mobilem {
+    display: none;
+}
+
+.mobilem a{
+    text-align: center;
+    float: none;
+    overflow: hidden;
+    display: block;
+    background-color: black;
+    color: cornsilk;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-right a{
+        display: none;
+    }
+
+    .header-right.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        padding: 5px;
+    }
+
+    .bar{
+        background-color: cornsilk;
+    }
+    
+
+}

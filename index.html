@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Rai</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Default - Copy.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="Archive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+</head>
+<body>
+    <div class="header">
+      <div class = "logohead"><a href="#default" class="logo">Shivam Rai</a></div>
+      <div class="header-right">
+        <a class="active" href="#">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="scms.html">SCMS</a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      </div>
+    </div>
+
+    <div class = "mobilem">
+      <a href="#">Home</a>
+      <a href="aboutme.html">About Me</a>
+      <a href="scms.html">SCMS</a>
+    </div>
+    
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="i.png" style="width: 100%; height:  500px;">
+        
+        <div class="text">Programmer</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="i (1).png" style="width: 100%; height:  500px;">
+        
+        <div class="text">Athlete</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="i (2).png" style="width: 100%; height:  500px;">
+        <div class="text">Hackathonist</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="i (3).png" style="width: 100%; height: 500px;">
+        <div class="text">Volunteer</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="i (4).png" style="width: 100%; height:  500px;">
+        <div class="text">Author, Poet and Editor</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="line-footer"></div>
+    <div class="hero"> 
+      <div class="hero__title">
+        <div class="hero__text">
+          <p>Innovation <br> Creation <br> Pioneering</p>
+        </div>
+        <div class="pic-ctn">
+          <img src="1.jpg" style="width: auto; height: 100%" class="pic">
+          <img src="2.jpg" style="width: auto; height: 100%;" class="pic">
+          <img src="3.jpg" style="width: auto; height: 100%;" class="pic">
+          <img src="4.jpg" style="width: auto; height: 100%;" class="pic">
+          <img src="5.jpg" style="width: auto; height: 100%;" class="pic">
+        </div>
+      </div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="line-footer"></div>
+    <footer>
+    <div class="footer">
+    <div class="row">
+    <a href="https://www.instagram.com/robunuts_0001/"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/shivamrai565/"><i class="fa fa-linkedin"></i></a>
+    </div>
+
+    <div class="row">
+    <ul>
+    <li><a href="#">Contact us</a></li>
+    <li><a href="#">Our Services</a></li>
+    <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+    </div>
+
+    <div class="row">
+    ScribeCraft Media Solutions Copyright © 2024 SCMS - All rights reserved
+    </div>
+    </div>
+    </footer>
+     
+    <script src="slideshow.js"></script>
+
+    <script>
+      var hamburger = document.querySelector(".hamburger");
+
+      function mobileMenu() {
+        var x = document.querySelector(".mobilem");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } 
+        else {
+          x.style.display = "none";
+        }
+      }
+
+      hamburger.addEventListener("click", mobileMenu);
+    </script>
+
+
+</body>
+</html>
